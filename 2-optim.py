@@ -5,7 +5,7 @@ import logging
 
 random.seed(0)
 logging.basicConfig(level=logging.DEBUG, format='%(message)s')
-logging.disable(logging.CRITICAL)
+# logging.disable(logging.CRITICAL)
 
 X2_GRADATION = 4
 

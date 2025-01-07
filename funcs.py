@@ -46,13 +46,13 @@ def crossover(population, crossover_rate):
     for i in range(len(population) - 1):
         for j in range(i + 1, len(population)):
             if random.random() < crossover_rate:
-                logging.debug(f"Crossover between {population[i]}, and {population[j]}")
                 point = random.randint(1, len(population[i]) - 1)
+                logging.debug(f"{population[i]} and {population[j]} (point:{point})")
                 child1 = population[i][:point] + population[j][point:]
                 child2 = population[j][:point] + population[i][point:]
                 population[i] = child1
                 population[j] = child2
-                logging.debug(f"Crossover result: {population[i]}, {population[j]}")
+                logging.debug(f"  result: {population[i]}, {population[j]}")
     return population
 
 def mutate(individual, mutation_rate):
