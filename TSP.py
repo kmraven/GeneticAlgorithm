@@ -6,7 +6,7 @@ import random
 random.seed(0)
 np.random.seed(0)
 logging.basicConfig(level=logging.DEBUG, format='%(message)s')
-# logging.disable(logging.CRITICAL)
+logging.disable(logging.CRITICAL)
 
 CITIES = np.array([
     [0, 0],  # 都市1
