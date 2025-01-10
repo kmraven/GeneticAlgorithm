@@ -19,7 +19,7 @@ CITIES = np.array([
 
 def eval_cost(route):
     distance = 0
-    for i in range(1, len(route)):
+    for i in range(len(route)):  # 出発点へ帰る
         dest = CITIES[route[i]]
         source = CITIES[route[i - 1]]
         distance += np.linalg.norm(dest - source)
